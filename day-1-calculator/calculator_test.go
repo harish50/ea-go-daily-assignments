@@ -20,3 +20,15 @@ func TestMultiplication(t *testing.T) {
 func TestDivision(t *testing.T) {
 	assert.Equal(t, division(6, 3), 2.0)
 }
+
+func TestSin(t *testing.T) {
+	assert.Equal(t, sin(0), 0.0)
+}
+
+func TestCos(t *testing.T) {
+	assert.Equal(t, cos(0), 1.0)
+}
+
+func TestTan(t *testing.T) {
+	assert.Equal(t, tan(0), 0.0)
+}
