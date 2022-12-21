@@ -12,3 +12,7 @@ func TestAddition(t *testing.T) {
 func TestSubtraction(t *testing.T) {
 	assert.Equal(t, subtraction(2, 3), float64(-1))
 }
+
+func TestMultiplication(t *testing.T) {
+	assert.Equal(t, multiplication(2, 3), 6.0)
+}
