@@ -16,3 +16,7 @@ func TestSubtraction(t *testing.T) {
 func TestMultiplication(t *testing.T) {
 	assert.Equal(t, multiplication(2, 3), 6.0)
 }
+
+func TestDivision(t *testing.T) {
+	assert.Equal(t, division(6, 3), 2.0)
+}
