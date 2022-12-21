@@ -32,3 +32,7 @@ func TestCos(t *testing.T) {
 func TestTan(t *testing.T) {
 	assert.Equal(t, tan(0), 0.0)
 }
+
+func TestSqrt(t *testing.T) {
+	assert.Equal(t, sqrt(4), 2.0)
+}

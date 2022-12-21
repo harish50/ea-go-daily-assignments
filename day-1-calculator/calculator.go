@@ -32,3 +32,7 @@ func cos(num float64) float64 {
 func tan(num float64) float64 {
 	return math.Tan(num)
 }
+
+func sqrt(num float64) float64 {
+	return math.Sqrt(num)
+}
