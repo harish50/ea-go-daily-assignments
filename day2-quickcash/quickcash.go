@@ -10,5 +10,9 @@ func (qc *QuickCash) getCash(amount float64) (float64, string) {
 		qc.PrimaryAccount.WithDraw(amount)
 		return amount, qc.PrimaryAccount.GetIdentifier()
 	}
+	if qc.SecondaryAccount.CanWithDraw(amount) {
+		qc.SecondaryAccount.WithDraw(amount)
+		return amount, qc.SecondaryAccount.GetIdentifier()
+	}
 	return amount, "NO_ACCOUNT"
 }

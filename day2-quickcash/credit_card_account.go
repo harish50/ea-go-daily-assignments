@@ -4,14 +4,14 @@ type CreditCardAccount struct {
 	balance float64
 }
 
-func (sa *CreditCardAccount) CanWithDraw(amount float64) bool {
-	return false
+func (cca *CreditCardAccount) CanWithDraw(amount float64) bool {
+	return amount <= cca.balance
 }
 
-func (sa *CreditCardAccount) WithDraw(amount float64) {
-
+func (cca *CreditCardAccount) WithDraw(amount float64) {
+	cca.balance = cca.balance - amount
 }
 
-func (sa *CreditCardAccount) GetIdentifier() string {
-	return ""
+func (cca *CreditCardAccount) GetIdentifier() string {
+	return "CREDIT_CARD_ACCOUNT"
 }
