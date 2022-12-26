@@ -1,4 +1,4 @@
-package day9_songs
+package main
 
 import (
 	"fmt"
@@ -22,6 +22,8 @@ type SongResponse struct {
 	ReleasedDate time.Time `json:"released_date"`
 }
 
+var songs []SongResponse
+
 func CreateHandler(ctx *gin.Context) {
 	request := SongRequest{}
 	err := ctx.BindJSON(&request)
@@ -31,12 +33,14 @@ func CreateHandler(ctx *gin.Context) {
 	}
 
 	response := SongResponse{
-		ID:           1,
+		ID:           len(songs) + 1,
 		Title:        request.Title,
 		Singer:       request.Singer,
 		Writer:       request.Writer,
 		ReleasedDate: request.ReleasedDate,
 	}
+
+	songs = append(songs, response)
 
 	ctx.JSON(http.StatusCreated, response)
 }

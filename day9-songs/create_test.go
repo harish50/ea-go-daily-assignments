@@ -1,4 +1,4 @@
-package day9_songs
+package main
 
 import (
 	"encoding/json"
