@@ -1,4 +1,4 @@
-package day2_quickcash
+package day2
 
 type QuickCash struct {
 	PrimaryAccount   Withdrawable

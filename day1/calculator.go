@@ -1,4 +1,4 @@
-package day_1_calculator
+package day1
 
 import "math"
 
