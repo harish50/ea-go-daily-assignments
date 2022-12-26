@@ -9,10 +9,7 @@ func TestGetCashFromSavingsAccount(t *testing.T) {
 	pa := &SavingsAccount{balance: 400}
 	sa := &CreditCardAccount{balance: 500}
 
-	qc := QuickCash{
-		pa,
-		sa,
-	}
+	qc := QuickCash{[]Withdrawable{pa, sa}}
 
 	amt, accType := qc.getCash(400)
 	assert.Equal(t, float64(400), amt)
@@ -23,10 +20,7 @@ func TestGetCashFromSecondaryAccount(t *testing.T) {
 	pa := &SavingsAccount{balance: 400}
 	sa := &CreditCardAccount{balance: 500}
 
-	qc := QuickCash{
-		pa,
-		sa,
-	}
+	qc := QuickCash{[]Withdrawable{pa, sa}}
 
 	amt, accType := qc.getCash(500)
 	assert.Equal(t, float64(500), amt)
