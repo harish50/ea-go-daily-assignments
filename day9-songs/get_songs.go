@@ -7,6 +7,6 @@ import (
 
 var songs []SongResponse
 
-func ReadHandler(ctx *gin.Context) {
+func GetSongsHandler(ctx *gin.Context) {
 	ctx.JSON(http.StatusOK, songs)
 }

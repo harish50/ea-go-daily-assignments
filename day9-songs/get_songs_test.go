@@ -13,7 +13,7 @@ import (
 
 func TestReadHandler(t *testing.T) {
 	s := gin.New()
-	s.GET("/api/songs", ReadHandler)
+	s.GET("/api/songs", GetSongsHandler)
 	releaseDate, _ := time.Parse(time.RFC3339, "2012-04-23T18:25:43.511Z")
 
 	songs = append(songs, SongResponse{

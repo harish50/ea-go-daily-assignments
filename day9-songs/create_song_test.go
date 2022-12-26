@@ -14,7 +14,7 @@ import (
 
 func makeACall(reqBody string) *httptest.ResponseRecorder {
 	s := gin.New()
-	s.POST("/api/songs", CreateHandler)
+	s.POST("/api/songs", CreateSongHandler)
 
 	req, _ := http.NewRequest("POST", "/api/songs", strings.NewReader(reqBody))
 	w := httptest.NewRecorder()

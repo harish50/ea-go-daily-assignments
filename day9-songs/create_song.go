@@ -22,7 +22,7 @@ type SongResponse struct {
 	ReleasedDate time.Time `json:"released_date"`
 }
 
-func CreateHandler(ctx *gin.Context) {
+func CreateSongHandler(ctx *gin.Context) {
 	request := SongRequest{}
 	err := ctx.BindJSON(&request)
 	if err != nil {
